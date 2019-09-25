@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "key-value-db", "key-value-db\key-value-db.csproj", "{75D3E976-E01C-4554-AEC4-CAA17F307105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "key-value-db-test", "key-value-db-test\key-value-db-test.csproj", "{BCD6059E-1F00-4CFC-BA9C-7806E4F72B43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75D3E976-E01C-4554-AEC4-CAA17F307105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D3E976-E01C-4554-AEC4-CAA17F307105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D3E976-E01C-4554-AEC4-CAA17F307105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D3E976-E01C-4554-AEC4-CAA17F307105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD6059E-1F00-4CFC-BA9C-7806E4F72B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD6059E-1F00-4CFC-BA9C-7806E4F72B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD6059E-1F00-4CFC-BA9C-7806E4F72B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD6059E-1F00-4CFC-BA9C-7806E4F72B43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

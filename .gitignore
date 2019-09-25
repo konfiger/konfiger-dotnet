@@ -1,0 +1,22 @@
+
+
+*.zip
+*.tgz
+*.tar
+*.7z
+*.rar
+*.egg-info
+*dist/
+*build/
+*egg-info/
+
+# C#
+
+*.obj
+*.suo
+*.cache
+/key-value-db/obj/
+/key-value-db/bin/
+/key-value-db-test/obj/
+/key-value-db-test/bin/
+
