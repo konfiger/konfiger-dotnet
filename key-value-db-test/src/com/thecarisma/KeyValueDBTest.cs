@@ -16,7 +16,7 @@ namespace com.thecarisma
                 Console.WriteLine(kvo);
             }        
             Console.WriteLine(keyValueDB.Get("Greeting"));
-            keyValueDB.Set("Greeting", "Hello from Azeez Adewale");
+            keyValueDB.Set("Greeting", "Hello from Adewale Azeez");
             keyValueDB.Add("One", "Added another one element");
             keyValueDB.Add("Null", "Remove this");
             Console.WriteLine(keyValueDB.GetLike("Three"));

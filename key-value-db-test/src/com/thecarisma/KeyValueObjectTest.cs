@@ -10,7 +10,7 @@ namespace com.thecarisma
     {
         public KeyValueObjectTest()
         {
-            KeyValueObject kvo1 = new KeyValueObject("Greetings ", "Hello world from Azeez Adewale");
+            KeyValueObject kvo1 = new KeyValueObject("Greetings ", "Hello world from Adewale Azeez");
             Console.WriteLine(kvo1);
             Console.ReadKey();
         }
