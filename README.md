@@ -167,22 +167,22 @@ Get the kvo using it integer index
 
 ```csharp
 keyValueDB.GetKeyValueObject(0);
-//KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Greet,Value=Hello World
 ```
 
 Get the kvo using it key 
 
 ```csharp
-keyValueDB.getKeyValueObject("Greet");
-//KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
+keyValueDB.GetKeyValueObject("Greet");
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Greet,Value=Hello World
 ```
 
 Get the kvo using it key with fallback kvo
 
 ```csharp
-const keyValueObject = new KeyValueObject("Name", "Adewale Azeez");
-keyValueDB.getKeyValueObject("Name", keyValueObject);
-//KeyValueObject {hashcode: 765363576, key: "Name", value: "Adewale Azeez"}
+KeyValueObject keyValueObject = new KeyValueObject("Name", "Adewale Azeez");
+keyValueDB.GetKeyValueObject("Name", keyValueObject);
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Name,Value=Adewale Azeez
 ```
 
 #### Get Like KeyValue Object
