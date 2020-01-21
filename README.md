@@ -72,12 +72,12 @@ paket add KeyValueDB --version 1.1.0
 The following example load, update, read and remove a simple key value object 
 
 ```csharp
-using System
+using System;
 using Io.Github.Thecarisma;
 
-namespace Io.Github.Thecarisma
+namespace Sample
 {
-    class Test() 
+    class Test 
     {
         public static void Main(string[] args)
         {
