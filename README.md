@@ -46,25 +46,25 @@ Package name is KeyValueDB.
 Using Package-Manager:
 
 ```bash
-Install-Package KeyValueDB -Version 1.1.0
+Install-Package KeyValueDB -Version 1.2.0
 ```
 
 Using .NET CLI:
 
 ```bash
-dotnet add package KeyValueDB --version 1.1.0
+dotnet add package KeyValueDB --version 1.2.0
 ```
 
 Using Pakage Reference:
 
 ```xml
-<PackageReference Include="KeyValueDB" Version="1.1.0" />
+<PackageReference Include="KeyValueDB" Version="1.2.0" />
 ```
 
 Using Packet CLI:
 
 ```xml
-paket add KeyValueDB --version 1.1.0
+paket add KeyValueDB --version 1.2.0
 ```
 
 ## Example
