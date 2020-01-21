@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace io.github.thecarisma
+namespace Io.Github.Thecarisma
 {
     public class KeyValueDB : IEnumerable<KeyValueObject>
     {

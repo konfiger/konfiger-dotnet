@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace io.github.thecarisma
+namespace Io.Github.Thecarisma
 {
     /*
      

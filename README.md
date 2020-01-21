@@ -75,7 +75,7 @@ The following example load, update, read and remove a simple key value object
 using System
 using Io.Github.Thecarisma;
 
-namespace io.github.thecarisma
+namespace Io.Github.Thecarisma
 {
     class Test() 
     {
