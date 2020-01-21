@@ -10,7 +10,8 @@ namespace io.github.thecarisma
             Console.WriteLine();
             foreach (KeyValueObject kvo in keyValueDB) {
                 Console.WriteLine(kvo);
-            }        
+            }
+            Console.WriteLine(keyValueDB.Clear());
             Console.WriteLine(keyValueDB.Get("Greeting"));
             keyValueDB.Set("Greeting", "Hello from Adewale Azeez");
             keyValueDB.Add("One", "Added another one element");
@@ -31,6 +32,8 @@ namespace io.github.thecarisma
             Console.WriteLine();
             keyValueDB.Add("Three", "Added another three element");
             Console.WriteLine(keyValueDB);
+            Console.WriteLine(keyValueDB.Size());
+            Console.WriteLine(keyValueDB.IsEmpty());
             Console.WriteLine();
             Console.ReadKey();
         }
