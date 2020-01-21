@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>com.thecarisma.KeyValueObjectTest</StartupObject>
+    <StartupObject>io.github.thecarisma.KeyValueObjectTest</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
