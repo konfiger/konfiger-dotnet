@@ -41,24 +41,30 @@ ___
 
 ## Installation
 
-Module name on npm and bower is @thecarisma/key-value-db.
+Package name is KeyValueDB.
 
-Using npm:
+Using Package-Manager:
 
 ```bash
-npm install @thecarisma/key-value-db
+Install-Package KeyValueDB -Version 1.1.0
 ```
 
-Using bower:
+Using .NET CLI:
 
 ```bash
-bower install @thecarisma/key-value-db
+dotnet add package KeyValueDB --version 1.1.0
 ```
 
-Using yarn:
+Using Pakage Reference:
 
-```bash
-yarn add @thecarisma/key-value-db
+```xml
+<PackageReference Include="KeyValueDB" Version="1.1.0" />
+```
+
+Using Packet CLI:
+
+```xml
+paket add KeyValueDB --version 1.1.0
 ```
 
 ## Example
