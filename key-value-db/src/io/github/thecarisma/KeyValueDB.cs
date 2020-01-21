@@ -498,8 +498,7 @@ namespace io.github.thecarisma
                     value += character ;
                 }
             }
-        }
-    
+        }    
 
         public override string ToString() 
         {
@@ -526,5 +525,21 @@ namespace io.github.thecarisma
         {
             return GetEnumerator();
         }
+
+        public int Size()
+        {
+            return keyValueObjects.Count;
+        }
+
+        public void Clear()
+        {
+            keyValueObjects = new List<KeyValueObject>();
+        }
+
+        public bool IsEmpty()
+        {
+            return keyValueObjects.Count == 0;
+        }
+
     }
 }

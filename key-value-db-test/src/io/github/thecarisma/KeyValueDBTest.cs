@@ -11,7 +11,7 @@ namespace io.github.thecarisma
             foreach (KeyValueObject kvo in keyValueDB) {
                 Console.WriteLine(kvo);
             }
-            Console.WriteLine(keyValueDB.Clear());
+            keyValueDB.Clear();
             Console.WriteLine(keyValueDB.Get("Greeting"));
             keyValueDB.Set("Greeting", "Hello from Adewale Azeez");
             keyValueDB.Add("One", "Added another one element");
