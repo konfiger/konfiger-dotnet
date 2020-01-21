@@ -7,8 +7,8 @@
     <ProjectGuid>{75D3E976-E01C-4554-AEC4-CAA17F307105}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>key_value_db</RootNamespace>
-    <AssemblyName>key-value-db</AssemblyName>
+    <RootNamespace>io.github.thecarisma</RootNamespace>
+    <AssemblyName>KeyValueDB</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
