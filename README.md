@@ -29,10 +29,10 @@ ___
         - [Set KeyValue Object](#set-keyvalue-object)
 	- [Inserting data](#inserting-data)
 	- [Removing data](#removing-data)
-	- [Size, Clear, isEmpty](#size,-clear,-isempty)
+	- [Size, Clear, IsEmpty](#size,-clear,-isempty)
         - [Size](#size)
         - [Clear](#clear)
-        - [isEmpty](#isempty)
+        - [IsEmpty](#isempty)
     - [Saving collection](#saving-collection)
     - [Iterating collection](#iterating-collection)
 - [Contributing](#contributing)
@@ -129,7 +129,7 @@ KeyValueDB keyValueDB = new KeyValueDB();
 To load existing KeyValueDB  
 
 ```csharp
-var keyValueDB = new KeyValueDB.KeyValueDB(
+KeyValueDB keyValueDB = new KeyValueDB(
         "Greet=Hello World,Project=KeyValueDB", //pss read string from file
         true, //case sensitive is true
         '=', //the seperator from key and value
@@ -140,19 +140,19 @@ var keyValueDB = new KeyValueDB.KeyValueDB(
 
 ### Inserting Data
 
-The only accepted type that can be inserted is a valid `KeyValueObject` and `String`. The method `add` can be used to add a new kvp into the object.
+The only accepted type that can be inserted is a valid `KeyValueObject` and `String`. The method `Add` can be used to add a new kvp into the object.
 
 Add a kvp with it key and value
 
 ```csharp
-keyValueDB.add("Greet", "Hello World");
+keyValueDB.Add("Greet", "Hello World");
 ```
 
 Add a kvp using the `KeyValueObject` class.
 
 ```csharp
-const keyValueObject = new KeyValueDB.KeyValueObject("Greet", "Hello World");
-keyValueDB.add(keyValueObject);
+KeyValueObject keyValueObject = new KeyValueObject("Greet", "Hello World");
+keyValueDB.Add(keyValueObject);
 ```
 
 ### Finding Data
@@ -166,7 +166,7 @@ You can get the kvo using either the key or index. If the corresponding kvo is n
 Get the kvo using it integer index
 
 ```csharp
-keyValueDB.getKeyValueObject(0);
+keyValueDB.GetKeyValueObject(0);
 //KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
 ```
 
@@ -180,7 +180,7 @@ keyValueDB.getKeyValueObject("Greet");
 Get the kvo using it key with fallback kvo
 
 ```csharp
-const keyValueObject = new KeyValueDB.KeyValueObject("Name", "Adewale Azeez");
+const keyValueObject = new KeyValueObject("Name", "Adewale Azeez");
 keyValueDB.getKeyValueObject("Name", keyValueObject);
 //KeyValueObject {hashcode: 765363576, key: "Name", value: "Adewale Azeez"}
 ```
@@ -199,7 +199,7 @@ keyValueDB.getLikeKeyValueObject("eet");
 Get a similar kvo using it key part with fallback kvo
 
 ```csharp
-const keyValueObject = new KeyValueDB.KeyValueObject("Name", "Adewale Azeez");
+const keyValueObject = new KeyValueObject("Name", "Adewale Azeez");
 keyValueDB.getKeyValueObject("Nam", keyValueObject);
 //KeyValueObject {hashcode: 765363576, key: "Name", value: "Adewale Azeez"}
 ```
@@ -234,7 +234,7 @@ keyValueDB.get("Licence", "The MIT Licence");
 Get the kvo using it key with fallback kvo
 
 ```csharp
-const keyValueObject = new KeyValueDB.KeyValueObject("Licence", "The MIT Licence");
+const keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
 keyValueDB.get("Name", keyValueObject);
 //"The MIT Licence"
 ```
@@ -255,7 +255,7 @@ keyValueDB.getLike("eet");
 Get a value using it key part with fallback kvo
 
 ```csharp
-const keyValueObject = new KeyValueDB.KeyValueObject("Licence", "The MIT Licence");
+const keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
 keyValueDB.getLike("Li", keyValueObject);
 //"The MIT Licence"
 ```
@@ -290,7 +290,7 @@ Note that this method completly changes the kvo so it can be used to replace a k
 Set a kvo using it index
 
 ```csharp
-const keyValueObject = new KeyValueDB.KeyValueObject("Licence", "The MIT Licence");
+const keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
 keyValueDB.setKeyValueObject(0, keyValueObject);
 //KeyValueObject {hashcode: 566565, key: "Licence", value: "The MIT Licence"}
 ```
@@ -298,7 +298,7 @@ keyValueDB.setKeyValueObject(0, keyValueObject);
 Set a kvo value using it key
 
 ```csharp
-const keyValueObject = new KeyValueDB.KeyValueObject("Licence", "The MIT Licence");
+const keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
 keyValueDB.setKeyValueObject("Greet", keyValueObject);
 //KeyValueObject {hashcode: 566565, key: "Licence", value: "The MIT Licence"}
 ```
@@ -316,7 +316,7 @@ keyValueDB.add("Key", "This is the value");
 Add a new kvp using a new KeyValueObject
 
 ```csharp
-const keyValueObject = new KeyValueDB.KeyValueObject("Key", "This is the value");
+const keyValueObject = new KeyValueObject("Key", "This is the value");
 keyValueDB.add(keyValueObject);
 ```
 

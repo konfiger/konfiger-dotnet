@@ -81,7 +81,7 @@ namespace Io.Github.Thecarisma
 		    The String representation of the KeyValueObject
          */
         public override string ToString() {
-            return "com.azeezadewale.KeyValueObject@" + this.GetHashCode() + ":Key=" + key + ",Value=" + value;
+            return "Io.Github.Thecarisma.KeyValueObject@" + this.GetHashCode() + ":Key=" + key + ",Value=" + value;
         }
 
     }
