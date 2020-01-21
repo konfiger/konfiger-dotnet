@@ -8,11 +8,11 @@
     <owners>$author$</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl>
-    <iconUrl>http://icon_url_here_or_delete_this_line/</iconUrl>
-    <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <projectUrl>https://keyvaluedb.github.io/key-value-db-csharp/</projectUrl>
+    <iconUrl>https://github.com/keyvaluedb/keyvaluedb.github.io/raw/master/icons/key-value-db-csharp.png</iconUrl>
+    <description>Light weight package to quickly and easily manage, load, update and save key-value type database</description>
+    <releaseNotes>Add, Remove, Set, Clear, IsEmpty API implemented.</releaseNotes>
     <copyright>Copyright 2020</copyright>
-    <tags>Tag1 Tag2</tags>
+    <tags>Database Dictionary KeyValue Languages Configuration</tags>
   </metadata>
 </package>
