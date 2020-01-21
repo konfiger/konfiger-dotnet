@@ -9,7 +9,7 @@
 *dist/
 *build/
 *egg-info/
-.nupkg
+*.nupkg
 
 # C#
 
