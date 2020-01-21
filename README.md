@@ -213,29 +213,29 @@ If a fallback kvo is sent as second parameter then when the request key is not f
 Get a value using it integer index
 
 ```csharp
-keyValueDB.get(0);
+keyValueDB.Get(0);
 //"Hello World"
 ```
 
 Get the value using it key 
 
 ```csharp
-keyValueDB.get("Greet");
+keyValueDB.Get("Greet");
 //"Hello World"
 ```
 
 Get the kvo using it key with fallback value
 
 ```csharp
-keyValueDB.get("Licence", "The MIT Licence");
+keyValueDB.Get("Licence", "The MIT Licence");
 //"The MIT Licence"
 ```
 
 Get the kvo using it key with fallback kvo
 
 ```csharp
-const keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
-keyValueDB.get("Name", keyValueObject);
+KeyValueObject keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
+keyValueDB.Get("Name", keyValueObject);
 //"The MIT Licence"
 ```
 
@@ -248,15 +248,15 @@ If a fallback kvo is sent as second parameter then when the request key is not f
 Get a value using it key part 
 
 ```csharp
-keyValueDB.getLike("eet");
+keyValueDB.GetLike("eet");
 //"Hello World"
 ```
 
 Get a value using it key part with fallback kvo
 
 ```csharp
-const keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
-keyValueDB.getLike("Li", keyValueObject);
+KeyValueObject keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
+keyValueDB.GetLike("Li", keyValueObject);
 //"The MIT Licence"
 ```
 
@@ -266,41 +266,41 @@ There are various way to update a kvp in the kvdb, the value can be changed dire
 
 #### Set
 
-The `set` method is used to change the value of the kvo using the index of the kvo or a kvo key. 
+The `Set` method is used to change the value of the kvo using the index of the kvo or a kvo key. 
 
 Set a kvo value using it index
 
 ```csharp
-keyValueDB.set(0, "Hello World from thecarisma");
-//KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World from thecarisma"}
+keyValueDB.Set(0, "Hello World from thecarisma");
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Greet,Value=Hello World from thecarisma
 ```
 
 Set a kvo value using it key
 
 ```csharp
-keyValueDB.set("Greet", "Hello World from thecarisma");
-//KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World from thecarisma"}
+keyValueDB.Set("Greet", "Hello World from thecarisma");
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Greet,Value=Hello World from thecarisma
 ```
 
 #### Set KeyValue Object
 
-Completly change a KeyValueObject in the kvdb using either it index or it key. The kvo is completly replaced which means unique fields like the hashcode of the kvo changes. When the kvo is set using it key if the corresponding kvo does not exist it is added into the kvdb.
+Completely change a KeyValueObject in the kvdb using either it index or it key. The kvo is completly replaced which means unique fields like the hashcode of the kvo changes. When the kvo is set using it key if the corresponding kvo does not exist it is added into the kvdb.
 Note that this method completly changes the kvo so it can be used to replace a kvo.
 
 Set a kvo using it index
 
 ```csharp
-const keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
-keyValueDB.setKeyValueObject(0, keyValueObject);
-//KeyValueObject {hashcode: 566565, key: "Licence", value: "The MIT Licence"}
+KeyValueObject keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
+keyValueDB.SetKeyValueObject(0, keyValueObject);
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Licence,Value=The MIT Licence
 ```
 
 Set a kvo value using it key
 
 ```csharp
-const keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
+KeyValueObject keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
 keyValueDB.setKeyValueObject("Greet", keyValueObject);
-//KeyValueObject {hashcode: 566565, key: "Licence", value: "The MIT Licence"}
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Licence,Value=The MIT Licence
 ```
 
 ### Inserting Data
