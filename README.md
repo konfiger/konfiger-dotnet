@@ -114,7 +114,7 @@ kvo  - Key Value Object
 
 ## API
 
-Even though JavaScript is weakly type the package does type checking to ensure wrong datatype is not passed into the method.
+Only string type is used as the key and value of the kvo. A kvo can be used to replace or set the value for a key.
 
 ### Creating/loading a document
 
@@ -122,13 +122,13 @@ You can use the package to update and create an existing key value database. Thi
 
 Create a new keyValueDB. The default seperator between the key and value is `=` and the delimeter between the kvp is `\n`(newline).
 
-```js
-var keyValueDB = new KeyValueDB.KeyValueDB();
+```csharp
+KeyValueDB keyValueDB = new KeyValueDB();
 ```
 
 To load existing KeyValueDB  
 
-```js
+```csharp
 var keyValueDB = new KeyValueDB.KeyValueDB(
         "Greet=Hello World,Project=KeyValueDB", //pss read string from file
         true, //case sensitive is true
@@ -144,13 +144,13 @@ The only accepted type that can be inserted is a valid `KeyValueObject` and `Str
 
 Add a kvp with it key and value
 
-```js
+```csharp
 keyValueDB.add("Greet", "Hello World");
 ```
 
 Add a kvp using the `KeyValueObject` class.
 
-```js
+```csharp
 const keyValueObject = new KeyValueDB.KeyValueObject("Greet", "Hello World");
 keyValueDB.add(keyValueObject);
 ```
@@ -165,21 +165,21 @@ You can get the kvo using either the key or index. If the corresponding kvo is n
 
 Get the kvo using it integer index
 
-```js
+```csharp
 keyValueDB.getKeyValueObject(0);
 //KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
 ```
 
 Get the kvo using it key 
 
-```js
+```csharp
 keyValueDB.getKeyValueObject("Greet");
 //KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
 ```
 
 Get the kvo using it key with fallback kvo
 
-```js
+```csharp
 const keyValueObject = new KeyValueDB.KeyValueObject("Name", "Adewale Azeez");
 keyValueDB.getKeyValueObject("Name", keyValueObject);
 //KeyValueObject {hashcode: 765363576, key: "Name", value: "Adewale Azeez"}
@@ -191,14 +191,14 @@ Get a kvo by checking the kvdb for the kvo object that contains a part of the ke
 
 Get a similar kvo using it key part 
 
-```js
+```csharp
 keyValueDB.getLikeKeyValueObject("eet");
 //KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
 ```
 
 Get a similar kvo using it key part with fallback kvo
 
-```js
+```csharp
 const keyValueObject = new KeyValueDB.KeyValueObject("Name", "Adewale Azeez");
 keyValueDB.getKeyValueObject("Nam", keyValueObject);
 //KeyValueObject {hashcode: 765363576, key: "Name", value: "Adewale Azeez"}
@@ -212,28 +212,28 @@ If a fallback kvo is sent as second parameter then when the request key is not f
 
 Get a value using it integer index
 
-```js
+```csharp
 keyValueDB.get(0);
 //"Hello World"
 ```
 
 Get the value using it key 
 
-```js
+```csharp
 keyValueDB.get("Greet");
 //"Hello World"
 ```
 
 Get the kvo using it key with fallback value
 
-```js
+```csharp
 keyValueDB.get("Licence", "The MIT Licence");
 //"The MIT Licence"
 ```
 
 Get the kvo using it key with fallback kvo
 
-```js
+```csharp
 const keyValueObject = new KeyValueDB.KeyValueObject("Licence", "The MIT Licence");
 keyValueDB.get("Name", keyValueObject);
 //"The MIT Licence"
@@ -247,14 +247,14 @@ If a fallback kvo is sent as second parameter then when the request key is not f
 
 Get a value using it key part 
 
-```js
+```csharp
 keyValueDB.getLike("eet");
 //"Hello World"
 ```
 
 Get a value using it key part with fallback kvo
 
-```js
+```csharp
 const keyValueObject = new KeyValueDB.KeyValueObject("Licence", "The MIT Licence");
 keyValueDB.getLike("Li", keyValueObject);
 //"The MIT Licence"
@@ -270,14 +270,14 @@ The `set` method is used to change the value of the kvo using the index of the k
 
 Set a kvo value using it index
 
-```js
+```csharp
 keyValueDB.set(0, "Hello World from thecarisma");
 //KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World from thecarisma"}
 ```
 
 Set a kvo value using it key
 
-```js
+```csharp
 keyValueDB.set("Greet", "Hello World from thecarisma");
 //KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World from thecarisma"}
 ```
@@ -289,7 +289,7 @@ Note that this method completly changes the kvo so it can be used to replace a k
 
 Set a kvo using it index
 
-```js
+```csharp
 const keyValueObject = new KeyValueDB.KeyValueObject("Licence", "The MIT Licence");
 keyValueDB.setKeyValueObject(0, keyValueObject);
 //KeyValueObject {hashcode: 566565, key: "Licence", value: "The MIT Licence"}
@@ -297,7 +297,7 @@ keyValueDB.setKeyValueObject(0, keyValueObject);
 
 Set a kvo value using it key
 
-```js
+```csharp
 const keyValueObject = new KeyValueDB.KeyValueObject("Licence", "The MIT Licence");
 keyValueDB.setKeyValueObject("Greet", keyValueObject);
 //KeyValueObject {hashcode: 566565, key: "Licence", value: "The MIT Licence"}
@@ -309,13 +309,13 @@ A new kvp can be inserted by invoking the `add` method. The kvp can be added usi
 
 Add a new kvp using the key and value
 
-```js
+```csharp
 keyValueDB.add("Key", "This is the value");
 ```
 
 Add a new kvp using a new KeyValueObject
 
-```js
+```csharp
 const keyValueObject = new KeyValueDB.KeyValueObject("Key", "This is the value");
 keyValueDB.add(keyValueObject);
 ```
@@ -326,7 +326,7 @@ Remove a kvp completely from the kvdb using either it key of the integer index. 
 
 Remove a kvp using integer index
 
-```js
+```csharp
 keyValueDB.remove(0);
 //removes the first kvp in the kvdb
 //KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
@@ -334,7 +334,7 @@ keyValueDB.remove(0);
 
 Remove a kvp using it key
 
-```js
+```csharp
 keyValueDB.remove("Greet");
 //removes the first kvp in the kvdb
 //KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
@@ -346,7 +346,7 @@ keyValueDB.remove("Greet");
 
 Get the size of the kvo in the kvdb.
 
-```js
+```csharp
 keyValueDB.size();
 //4
 ```
@@ -355,7 +355,7 @@ keyValueDB.size();
 
 Remove all the elements and kvo from the kvdb
 
-```js
+```csharp
 keyValueDB.clear();
 //keyValueDB.size() = 0
 ```
@@ -364,7 +364,7 @@ keyValueDB.clear();
 
 Check whether the kvdb contains any kvo in it.
 
-```js
+```csharp
 keyValueDB.isEmpty();
 //false
 ```
@@ -373,7 +373,7 @@ keyValueDB.isEmpty();
 
 The kvp collection kvdb can be inspected as a string using the `toString` method. The returned value can be saved locally by writing to a persistent storage or to a plain text file. The output of the `toString` method is determined by the kvos, the seperator and the delimeter.
 
-```js
+```csharp
 keyValueDB.toString();
 // "Greet=Hello World,Project=KeyValueDB,Project=KeyValueDB,Licence=The MIT Licence"
 ```
@@ -382,7 +382,7 @@ keyValueDB.toString();
 
 The KeyValueDB object can be iterated natively using the `for..of` loop expression. 
 
-```js
+```csharp
 for (var kvo of keyValueDB) {
     //operate on the KeyValueObject
 };
