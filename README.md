@@ -85,24 +85,22 @@ namespace Sample
             KeyValueDB keyValueDB = new KeyValueDB("Greet=Hello World,Project=KeyValueDB", true, '=', ',', false);
 
             //get an object
-            Console.WriteLine(keyValueDB.get("Greet"));
+            Console.WriteLine(keyValueDB.Get("Greet"));
+
+            //remove an object
+            keyValueDB.Remove("Greet");
+
+            //add an object
+            keyValueDB.Add("What", "i don't know what to write here");
+
+            //print all the objects
+            foreach (var kvo in keyValueDB) {
+                Console.WriteLine(kvo);
+            }
         }
     }
 }
 
-
-
-
-//remove an object
-keyValueDB.remove("Greet");
-
-//add an object
-keyValueDB.add("What", "i don't know what to write here");
-
-//print all the objects
-for (var kvo of keyValueDB) {
-	console.log('$' + kvo);
-};
 ```
 
 ## Legends
