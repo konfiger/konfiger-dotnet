@@ -299,7 +299,7 @@ Set a kvo value using it key
 
 ```csharp
 KeyValueObject keyValueObject = new KeyValueObject("Licence", "The MIT Licence");
-keyValueDB.setKeyValueObject("Greet", keyValueObject);
+keyValueDB.SetKeyValueObject("Greet", keyValueObject);
 //Io.Github.Thecarisma.KeyValueObject@55915408:Key=Licence,Value=The MIT Licence
 ```
 
