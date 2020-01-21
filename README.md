@@ -305,19 +305,19 @@ keyValueDB.SetKeyValueObject("Greet", keyValueObject);
 
 ### Inserting Data
 
-A new kvp can be inserted by invoking the `add` method. The kvp can be added using it key and value or by directly adding the KeyValueObject to the kvdb. 
+A new kvp can be inserted by invoking the `Add` method. The kvp can be added using it key and value or by directly adding the KeyValueObject to the kvdb. 
 
 Add a new kvp using the key and value
 
 ```csharp
-keyValueDB.add("Key", "This is the value");
+keyValueDB.Add("Key", "This is the value");
 ```
 
 Add a new kvp using a new KeyValueObject
 
 ```csharp
-const keyValueObject = new KeyValueObject("Key", "This is the value");
-keyValueDB.add(keyValueObject);
+KeyValueObject keyValueObject = new KeyValueObject("Key", "This is the value");
+keyValueDB.Add(keyValueObject);
 ```
 
 ### Removing Data
@@ -327,17 +327,17 @@ Remove a kvp completely from the kvdb using either it key of the integer index. 
 Remove a kvp using integer index
 
 ```csharp
-keyValueDB.remove(0);
+keyValueDB.Remove(0);
 //removes the first kvp in the kvdb
-//KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Greet,Value=Hello World
 ```
 
 Remove a kvp using it key
 
 ```csharp
-keyValueDB.remove("Greet");
+keyValueDB.Remove("Greet");
 //removes the first kvp in the kvdb
-//KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Greet,Value=Hello World
 ```
 
 ## Size, Clear, isEmpty
@@ -347,7 +347,7 @@ keyValueDB.remove("Greet");
 Get the size of the kvo in the kvdb.
 
 ```csharp
-keyValueDB.size();
+keyValueDB.Size();
 //4
 ```
 
@@ -356,8 +356,8 @@ keyValueDB.size();
 Remove all the elements and kvo from the kvdb
 
 ```csharp
-keyValueDB.clear();
-//keyValueDB.size() = 0
+keyValueDB.Clear();
+//keyValueDB.Size() = 0
 ```
 
 ### isEmpty
@@ -365,27 +365,27 @@ keyValueDB.clear();
 Check whether the kvdb contains any kvo in it.
 
 ```csharp
-keyValueDB.isEmpty();
-//false
+keyValueDB.IsEmpty();
+//False
 ```
 
 ## Saving collection
 
-The kvp collection kvdb can be inspected as a string using the `toString` method. The returned value can be saved locally by writing to a persistent storage or to a plain text file. The output of the `toString` method is determined by the kvos, the seperator and the delimeter.
+The kvp collection kvdb can be inspected as a string using the `ToString` method. The returned value can be saved locally by writing to a persistent storage or to a plain text file. The output of the `ToString` method is determined by the kvos, the seperator and the delimeter.
 
 ```csharp
-keyValueDB.toString();
+keyValueDB.ToString();
 // "Greet=Hello World,Project=KeyValueDB,Project=KeyValueDB,Licence=The MIT Licence"
 ```
 
 ## Iterating collection
 
-The KeyValueDB object can be iterated natively using the `for..of` loop expression. 
+The KeyValueDB object can be iterated natively using the `foreach..in` loop expression. 
 
 ```csharp
-for (var kvo of keyValueDB) {
+foreach (var kvo in keyValueDB) {
     //operate on the KeyValueObject
-};
+}
 ```
 
 ## Contributing
@@ -401,11 +401,7 @@ You can support some of this community as they make big impact in the developeme
 - https://www.patreon.com/devcareer
 - https://opencollective.com/osca
 
-Or you can support me to continue making awesome open source projects > https://patreon.com/thecarisma. Thanks!🤗
-
-**You can make big difference**.
-
 ## License
 
-MIT License Copyright (c) 2019 Adewale Azeez - keyvaluedb
+MIT License Copyright (c) 2020 Adewale Azeez - keyvaluedb
 
