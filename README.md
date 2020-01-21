@@ -71,14 +71,27 @@ paket add KeyValueDB --version 1.1.0
 
 The following example load, update, read and remove a simple key value object 
 
-```js
-const KeyValueDB = require("@thecarisma/key-value-db");
+```csharp
+using System
+using Io.Github.Thecarisma;
 
-//initialize the key-value 
-var keyValueDB = new KeyValueDB.KeyValueDB("Greet=Hello World,Project=KeyValueDB", true, '=', ',', false);
+namespace io.github.thecarisma
+{
+    class Test() 
+    {
+        public static void Main(string[] args)
+        {
+            //initialize the key-value 
+            KeyValueDB keyValueDB = new KeyValueDB("Greet=Hello World,Project=KeyValueDB", true, '=', ',', false);
 
-//get an object
-console.log(keyValueDB.get("Greet"));
+            //get an object
+            Console.WriteLine(keyValueDB.get("Greet"));
+        }
+    }
+}
+
+
+
 
 //remove an object
 keyValueDB.remove("Greet");
