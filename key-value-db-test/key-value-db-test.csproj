@@ -44,8 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\com\thecarisma\KeyValueDBTest.cs" />
-    <Compile Include="src\com\thecarisma\KeyValueObjectTest.cs" />
+    <Compile Include="src\io\github\thecarisma\KeyValueDBTest.cs" />
+    <Compile Include="src\io\github\thecarisma\KeyValueObjectTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

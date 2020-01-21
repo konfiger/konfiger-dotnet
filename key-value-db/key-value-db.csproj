@@ -40,8 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\com\thecarisma\KeyValueDB.cs" />
-    <Compile Include="src\com\thecarisma\KeyValueObject.cs" />
+    <Compile Include="src\io\github\thecarisma\KeyValueDB.cs" />
+    <Compile Include="src\io\github\thecarisma\KeyValueObject.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
