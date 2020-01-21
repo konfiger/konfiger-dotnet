@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace com.thecarisma
+namespace io.github.thecarisma
 {
     public class KeyValueDB : IEnumerable<KeyValueObject>
     {
