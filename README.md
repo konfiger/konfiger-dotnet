@@ -192,16 +192,16 @@ Get a kvo by checking the kvdb for the kvo object that contains a part of the ke
 Get a similar kvo using it key part 
 
 ```csharp
-keyValueDB.getLikeKeyValueObject("eet");
-//KeyValueObject {hashcode: 69066473, key: "Greet", value: "Hello World"}
+keyValueDB.GetLikeKeyValueObject("eet");
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Greet,Value=Hello World
 ```
 
 Get a similar kvo using it key part with fallback kvo
 
 ```csharp
-const keyValueObject = new KeyValueObject("Name", "Adewale Azeez");
+KeyValueObject keyValueObject = new KeyValueObject("Name", "Adewale Azeez");
 keyValueDB.getKeyValueObject("Nam", keyValueObject);
-//KeyValueObject {hashcode: 765363576, key: "Name", value: "Adewale Azeez"}
+//Io.Github.Thecarisma.KeyValueObject@55915408:Key=Name,Value=Adewale Azeez
 ```
 
 #### Get
