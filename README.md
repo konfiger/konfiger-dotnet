@@ -395,7 +395,7 @@ The KeyValueObject is the main internal type used in the KeyValueDB class.
 In KeyValueDB the key value pair is stored in `List<KeyValueObject>` type, all search, 
 updating and removal is done on the `keyValueObjects` in the class. The string sent as 
 first parameter if parsed into valid key value using the separator and delimiter fields. The 
-`toString` method also parse the `keyValueObjects` content into a valid string with regards to the 
+`ToString` method also parse the `keyValueObjects` content into a valid string with regards to the 
 separator and delimeter. 
 
 ## Contributing
