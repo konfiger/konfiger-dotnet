@@ -1,7 +1,5 @@
 # <p style="text-align: center;" align="center"><img src="https://github.com/keyvaluedb/keyvaluedb.github.io/raw/master/icons/key-value-db-csharp.png" alt="key-value-db-csharp" style="width:180px;height:160px;" width="180" height="160" /><br /> key-value-db-csharp</p>
 
-<span style="display:block;text-align:center"> ![Nuget](https://img.shields.io/nuget/dt/KeyValueDB) ![GitHub repo size](https://img.shields.io/github/repo-size/keyvaluedb/key-value-db-csharp)	![GitHub contributors](https://img.shields.io/github/contributors/keyvaluedb/key-value-db-csharp) [![Twitter Follow](https://img.shields.io/twitter/follow/iamthecarisma?style=social)](https://twitter.com/iamthecarisma) </span>
-
 <p style="text-align: center;" align="center">Light weight package to quickly and easily manage, load, update and save key-value type database </p>
 
 ---
